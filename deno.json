@@ -11,5 +11,6 @@
   "imports": {
     "@viviengraffin/ip-context": "jsr:@viviengraffin/ip-context@^0.1.4"
   },
-  "version": "0.1.0"
+  "version": "0.1.2",
+  "nodeModulesDir":"auto"
 }
