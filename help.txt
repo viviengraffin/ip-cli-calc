@@ -1,0 +1,10 @@
+ip-cli-calc [options] <ADDRESS>[[/]<NETMASK>] [NETMASK]
+
+Works with IPv4 or IPv6 addresses.
+
+options:
+-v --version : Get the version of this program
+-h --help : Display the help of this program
+-j --json : Display the result as a JSON
+--hosts=<HOSTS> : Generate the submask for an host number
+-b --no-binary : Doesn't display the binary of address or mask

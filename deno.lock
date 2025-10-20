@@ -1,0 +1,16 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@viviengraffin/ip-context@~0.1.4": "0.1.4"
+  },
+  "jsr": {
+    "@viviengraffin/ip-context@0.1.4": {
+      "integrity": "9c3fd39a8df096064bf59c505d597beb480250b181833bca3bbd4cda61e2adda"
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@viviengraffin/ip-context@~0.1.4"
+    ]
+  }
+}
