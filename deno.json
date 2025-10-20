@@ -1,11 +1,11 @@
 {
   "tasks": {
-    "compile": "deno compile --unstable-raw-imports -o out/ip-cli-calc main.ts",
-    "compile:windows:x86": "deno compile --unstable-raw-imports --target=x86_64-pc-windows-msvc -o out/windows/x86/ip-cli-calc.exe main.ts",
-    "compile:macos:x86": "deno compile --unstable-raw-imports --target=x86_64-apple-darwin -o out/macos/x86/ip-cli-calc main.ts",
-    "compile:macos:arm": "deno compile --unstable-raw-imports --target=aarch64-apple-darwin -o out/macos/arm/ip-cli-calc main.ts",
-    "compile:linux:x86": "deno compile --unstable-raw-imports --target=x86_64-unknown-linux-gnu -o out/linux/x86/ip-cli-calc main.ts",
-    "compile:linux:arm": "deno compile --unstable-raw-imports --target=aarch64-unknown-linux-gnu -o out/linux/arm/ip-cli-calc main.ts",
+    "compile": "deno compile --unstable-raw-imports --include=deno.json --include=help.txt -o out/ip-cli-calc main.ts",
+    "compile:windows:x86": "deno compile --unstable-raw-imports --include=deno.json --include=help.txt --target=x86_64-pc-windows-msvc -o out/windows/x86/ip-cli-calc.exe main.ts",
+    "compile:macos:x86": "deno compile --unstable-raw-imports --include=deno.json --include=help.txt --target=x86_64-apple-darwin -o out/macos/x86/ip-cli-calc main.ts",
+    "compile:macos:arm": "deno compile --unstable-raw-imports --include=deno.json --include=help.txt --target=aarch64-apple-darwin -o out/macos/arm/ip-cli-calc main.ts",
+    "compile:linux:x86": "deno compile --unstable-raw-imports --include=deno.json --include=help.txt --target=x86_64-unknown-linux-gnu -o out/linux/x86/ip-cli-calc main.ts",
+    "compile:linux:arm": "deno compile --unstable-raw-imports --include=deno.json --include=help.txt --target=aarch64-unknown-linux-gnu -o out/linux/arm/ip-cli-calc main.ts",
     "clean": "rm -r out"
   },
   "imports": {
