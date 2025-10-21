@@ -22,6 +22,8 @@ function getHostsString(hostsString: string): string {
 export function createContextFromArgs(
   args: string[],
 ): IPv4Context | IPv6Context {
+  console.dir(args)
+
   let sAddress: string;
   let cidr: number | null = null;
   let sSubmask: string | null = null;
@@ -36,6 +38,7 @@ export function createContextFromArgs(
     const slashPos = args[0].indexOf("/");
     if (slashPos !== -1) {
       sAddress = args[0].substring(0, slashPos);
+      console.dir(args[0].substring(slashPos + 1))
       cidr = Number(args[0].substring(slashPos + 1));
     } else {
       sAddress = args[0];
@@ -79,7 +82,7 @@ export function createContextFromArgs(
     // deno-lint-ignore ban-ts-comment
     // @ts-expect-error
     context = address.createContextWithHosts(hosts);
-  } else if (cidr) {
+  } else if (cidr !== null) {
     context = address.createContextWithSubmask(cidr);
   } else if (sSubmask) {
     context = address.createContextWithSubmask(sSubmask);
