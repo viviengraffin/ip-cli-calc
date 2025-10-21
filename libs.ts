@@ -22,8 +22,6 @@ function getHostsString(hostsString: string): string {
 export function createContextFromArgs(
   args: string[],
 ): IPv4Context | IPv6Context {
-  console.dir(args);
-
   let sAddress: string;
   let cidr: number | null = null;
   let sSubmask: string | null = null;
@@ -53,8 +51,6 @@ export function createContextFromArgs(
   }
 
   const address = ip(sAddress!);
-
-  console.log(address, sHosts);
 
   if (sHosts !== null) {
     if (address instanceof IPv4Address) {
