@@ -15,12 +15,19 @@ import {
   MAX_LABEL_LENGTH,
 } from "./const.ts";
 
+function getHostsString(hostsString: string): string {
+  return hostsString.substring(8);
+}
+
 export function createContextFromArgs(
   args: string[],
 ): IPv4Context | IPv6Context {
+  console.dir(args);
+
   let sAddress: string;
   let cidr: number | null = null;
   let sSubmask: string | null = null;
+  let sHosts: string | null = null;
   let hosts: number | bigint | null = null;
 
   if (args.length === 0) {
@@ -37,12 +44,25 @@ export function createContextFromArgs(
     }
   }
   if (args.length === 2) {
-    sAddress = args[0];
+    if (args[0].startsWith("--hosts=")) {
+      sAddress = args[1];
+      sHosts = getHostsString(args[0]);
+    } else {
+      sAddress = args[0];
+    }
   }
 
   const address = ip(sAddress!);
 
-  if (args.length === 2) {
+  console.log(address, sHosts);
+
+  if (sHosts !== null) {
+    if (address instanceof IPv4Address) {
+      hosts = Number(sHosts);
+    } else {
+      hosts = BigInt(sHosts);
+    }
+  } else if (args.length === 2) {
     sAddress = args[0];
     if (args[1].startsWith("--hosts=")) {
       if (cidr !== null) {
