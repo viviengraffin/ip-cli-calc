@@ -9,7 +9,7 @@
     "clean": "rm -r out"
   },
   "imports": {
-    "@viviengraffin/ip-context": "jsr:@viviengraffin/ip-context@^0.1.4"
+    "@viviengraffin/ip-context": "jsr:@viviengraffin/ip-context@^0.1.5"
   },
   "version": "0.1.3"
 }
