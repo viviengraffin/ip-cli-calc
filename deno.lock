@@ -1,16 +1,16 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@viviengraffin/ip-context@~0.1.5": "0.1.5"
+    "jsr:@viviengraffin/ip-context@0.1.6": "0.1.6"
   },
   "jsr": {
-    "@viviengraffin/ip-context@0.1.5": {
-      "integrity": "b18c8a6a472086c24916838eb3ea69b0dc8aab8b9f9e70ae9c76a3ac4c97ea41"
+    "@viviengraffin/ip-context@0.1.6": {
+      "integrity": "76a28523e617cd8fffd92ba3b88b633a9cd1bd64f11a5ad33486079f49e4cda1"
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@viviengraffin/ip-context@~0.1.5"
+      "jsr:@viviengraffin/ip-context@0.1.6"
     ]
   }
 }

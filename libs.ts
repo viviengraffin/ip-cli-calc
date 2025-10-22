@@ -101,7 +101,7 @@ export function displayIPv4Context(
   binary: boolean,
 ): void {
   const wildcard = getWildcardAddress(context.submask);
-  const type = context.address.getType();
+  const type = context.network.getType();
   console.log(
     "Address:".padEnd(MAX_LABEL_LENGTH, " ") +
       context.address.toString().padEnd(MAX_IPV4_ADDRESS_LENGTH, " ") +
@@ -158,7 +158,7 @@ export function displayIPv6Context(
   context: IPv6Context,
   binary: boolean,
 ): void {
-  const type = context.address.getType();
+  const type = context.network.getType();
   console.log(
     "Address:".padEnd(MAX_LABEL_LENGTH, " ") +
       (context.address.toString()).padEnd(MAX_IPv6_ADDRESS_LENGTH, " ") +
@@ -215,7 +215,7 @@ export function displayIPv4ContextJSON(context: IPv4Context): void {
     size: context.size,
     hosts: context.hosts,
     class: context.class,
-    type: context.address.getType(),
+    type: context.network.getType(),
   }));
 }
 
@@ -231,7 +231,7 @@ export function displayIPv6ContextJSON(context: IPv6Context): void {
     lastHost: context.lastHost.toString(),
     size: context.size,
     hosts: context.hosts,
-    type: context.address.getType(),
+    type: context.network.getType(),
   }, (_, value) => typeof value === "bigint" ? value.toString() : value));
 }
 
